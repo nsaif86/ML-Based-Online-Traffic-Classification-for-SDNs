@@ -70,8 +70,16 @@ In this project, we created two Ryu applications, and the source codes are store
 
 In our situation, we have omitted network management on network services, so a flow for IP packets simply consists of only two matching fields: Source and Destination MAC Address. This simplicity reduces the load on the controller and helps switches forward packets faster.
 
-To run the applications, copy the two Python programs into the ryu.app folder of the Ryu directory and execute the following command:
+To run the applications, copy the two Python programs into the ryu.app folder of the Ryu directory and open two terminal windows, execute the following command:
 
+In the first terminal
 ```
 sudo ryu-manager  monitor.py classifier_nn.py NN
 ```
+In the second terminal
+```
+sudo python topology.py
+```
+Then, you can generate traffic (voice, DDoS, etc.) using D-ITG inside Mininet and observe the results in the first terminal.
+
+More files and descriptions will be available as soon as possible. Please, if you find the code useful, cite our work.
