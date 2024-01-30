@@ -66,6 +66,12 @@ python -m pip install tensorflow, keras, numpy, pandas, scikit-learn, matplotlib
 
 #### SDN Applications Usage
 
-In this project, we created two Ryu applications, the source codes are stored in [pox-apps directory](https://github.com/duchuyle108/SDN-TMprediction/tree/main/pox-apps). The first component, basic_forwarding, installs flow rules to switches basing on the incoming packets.In our situation, we ignore the network management on network services, so a flow for IP packets simply consists of only three matching fields: protocol (IP), Source IP Address and Destination IP Address. The simplicity would reduce load on controller and help switches forward packets faster. The second also our main application, traffic_observation, perform our main objective, to periodically measure Traffic Matrix of the network. The method is described clearly in our paper.
+In this project, we created two Ryu applications, and the source codes are stored in the  [SDN-Classifier directory](https://github.com/nsaif86/SDN-Classifier). The first component, monitoring, is responsible for collecting and extracting the features. The second, which is also our main application, performs our primary objective: feeding the features of each flow into the training saved model. The method is clearly described in our paper.
 
-To run the applications, copy two python programs into ext folder of POX directory and run following command:
+In our situation, we have omitted network management on network services, so a flow for IP packets simply consists of only two matching fields: Source and Destination MAC Address. This simplicity reduces the load on the controller and helps switches forward packets faster.
+
+To run the applications, copy the two Python programs into the ryu.app folder of the Ryu directory and execute the following command:
+
+'''
+sudo ryu-manager  monitor.py classifier_nn.py NN
+'''
