@@ -72,6 +72,6 @@ In our situation, we have omitted network management on network services, so a f
 
 To run the applications, copy the two Python programs into the ryu.app folder of the Ryu directory and execute the following command:
 
-'''
+```
 sudo ryu-manager  monitor.py classifier_nn.py NN
-'''
+```
