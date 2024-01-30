@@ -2,10 +2,10 @@ This project represents the work in our paper submmitted to [2022 IEEE 2nd Confe
 
 ### In this project, we provide:
 
-> SDN application source codes
-> Our Testbed configuration, deployment including scripts and used resources
-> Model training and evaluation source codes
-> Every above component will be described in this README as much as possible.
+- SDN application source codes
+- Our Testbed configuration, deployment including scripts and used resources
+- Model training and evaluation source codes
+- Every above component will be described in this README as much as possible.
 
 ### Dependencies
 
