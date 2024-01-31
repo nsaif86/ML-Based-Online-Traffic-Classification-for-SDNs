@@ -11,7 +11,7 @@ This project represents the work in our paper submmitted to [2022 IEEE 2nd Confe
 
 #### OS: Ubuntu 20.04.x
 
->  If you are using Windows or other OS, you can install Ubuntu 20.04 as a Virtual Machine (VM) using Virtual Box. You can download the ISO installer from the this [link:](https://www.ubuntu.com/download/desktop)
+>  If you are using Windows or other OS, you can install Ubuntu 20.04 as a Virtual Machine (VM) using Virtual Box. You can download the ISO installer from the this [link.](https://www.ubuntu.com/download/desktop)
 
 ####  Ryu controller
 
