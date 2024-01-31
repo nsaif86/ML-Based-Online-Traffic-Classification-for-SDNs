@@ -85,6 +85,4 @@ Then, you can generate traffic (voice, DDoS, etc.) using D-ITG inside Mininet an
 
 More files and descriptions will be available as soon as possible. Please, if you find the code useful, cite our work.
 
-M. Nsaif, G. Kovásznai, M. Abboosh, A. Malik and R. d. Fréin, "ML-Based Online Traffic Classification for SDNs," 2022 IEEE 2nd Conference on Information Technology and Data Science (CITDS), Debrecen, Hungary, 2022, pp. 217-222, doi: 10.1109/CITDS54976.2022.9914138. keywords: {Support vector machines;Measurement;Power demand;Wireless networks;Telecommunication traffic;Machine learning;Artificial neural networks;Machine learning;classification;dataset;SDN},
-
-
+M. Nsaif, G. Kovásznai, M. Abboosh, A. Malik and R. d. Fréin, "ML-Based Online Traffic Classification for SDNs," 2022 IEEE 2nd Conference on Information Technology and Data Science (CITDS), Debrecen, Hungary, 2022, pp. 217-222, doi: 10.1109/CITDS54976.2022.9914138.
