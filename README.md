@@ -15,8 +15,8 @@ This project represents the work in our paper submmitted to [2022 IEEE 2nd Confe
 
 ####  Ryu controller
 
-> We use [Ryu](https://ryu-sdn.org/) to deploy our management and monitoring SDN application. Ryu can work in any OS Environment that support python 3. You can install Ryu as following: 
- `sudo pip install ryu`
+> We use [Ryu](https://ryu-sdn.org/) to deploy our management and monitoring SDN application. Ryu can work in any OS Environment that supports python 3. You can install Ryu as follows: 
+ ```sudo pip install ryu```
 
 #### Mininet
 
