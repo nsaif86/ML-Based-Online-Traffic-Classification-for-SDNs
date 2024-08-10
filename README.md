@@ -67,7 +67,7 @@ python -m pip install tensorflow, keras, numpy, pandas, scikit-learn, matplotlib
 
 ### SDN Applications Usage
 
-In this project, we created two Ryu applications, and the source codes are stored in the  [SDN-Classifier directory](https://github.com/nsaif86/SDN-Classifier). The first component, monitoring, is responsible for collecting and extracting the features. The second, which is also our main application, performs our primary objective: feeding the features of each flow into the training saved model. The method is clearly described in our paper.
+In this project, we created two Ryu applications, and the source codes are stored in the  [SDN-Classifier directory](https://github.com/nsaif86/SDN-Classifier). The first component, the classifier, is responsible for collecting and extracting the features and feeding the features of each flow into the training saved model. The method is clearly described in our paper. The second one is the topology model
 
 In our situation, we have omitted network management on network services, so a flow for IP packets simply consists of only two matching fields: Source and Destination MAC Address. This simplicity reduces the load on the controller and helps switch forward packets faster.
 
@@ -75,11 +75,12 @@ To run the applications, copy the two Python programs into the ryu.app folder of
 
 In the first terminal
 ```
-sudo ryu-manager  monitor.py classifier_nn.py NN
+sudo python3  traffic_classifier_python3.py neural_network
+
 ```
 In the second terminal
 ```
-sudo python topology.py
+sudo python3 topo.py
 ```
 Then, you can generate traffic (voice, DDoS, etc.) using D-ITG inside Mininet and observe the results in the first terminal.
 
