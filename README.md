@@ -67,7 +67,7 @@ python -m pip install tensorflow, keras, numpy, pandas, scikit-learn, matplotlib
 
 ### SDN Applications Usage
 
-In this project, we created two Ryu applications, and the source codes are stored in the  [SDN-Classifier directory](https://github.com/nsaif86/SDN-Classifier). The first component, the classifier, is responsible for collecting and extracting the features and feeding the features of each flow into the training saved model. The method is clearly described in our paper. The second one is the topology model
+In this project, we created two Ryu applications, and the source codes are stored in the  [SDN-Classifier directory](https://github.com/nsaif86/SDN-Classifier). The first component, the classifier, is responsible for collecting and extracting the features and feeding the features of each flow into the training saved model it is the same APPa used in [project](https://github.com/a9khan/trafficclassifier) except that we used neural network mode classifier. The method is clearly described in our paper. The second one is the topology model
 
 In our situation, we have omitted network management on network services, so a flow for IP packets simply consists of only two matching fields: Source and Destination MAC Address. This simplicity reduces the load on the controller and helps switch forward packets faster.
 
