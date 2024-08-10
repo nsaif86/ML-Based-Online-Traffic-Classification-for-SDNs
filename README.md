@@ -1,4 +1,4 @@
-This project represents the work in our paper submmitted to [2022 IEEE 2nd Conference on Information Technology and Data Science (CITDS)](https://ieeexplore.ieee.org/xpl/conhome/9913999/proceeding) "ML-Based Online Traffic Classification for SDNs",  DOI: [10.1109/CITDS54976.2022.9914138](https://doi.org/10.1109/CITDS54976.2022.9914138), Authors: [Mohammed Nsaif](https://ieeexplore.ieee.org/author/37089577341); [Gergely Kovásznai](https://ieeexplore.ieee.org/author/37569885400); [Mohammed Abboosh](https://ieeexplore.ieee.org/author/37089568445); [Ali Malik](https://ieeexplore.ieee.org/author/37088446887); [Ruairí de Fréin](https://ieeexplore.ieee.org/author/37086819785)
+This project represents the work in our paper submitted to [2022 IEEE 2nd Conference on Information Technology and Data Science (CITDS)](https://ieeexplore.ieee.org/xpl/conhome/9913999/proceeding) "ML-Based Online Traffic Classification for SDNs",  DOI: [10.1109/CITDS54976.2022.9914138](https://doi.org/10.1109/CITDS54976.2022.9914138), Authors: [Mohammed Nsaif](https://ieeexplore.ieee.org/author/37089577341); [Gergely Kovásznai](https://ieeexplore.ieee.org/author/37569885400); [Mohammed Abboosh](https://ieeexplore.ieee.org/author/37089568445); [Ali Malik](https://ieeexplore.ieee.org/author/37088446887); [Ruairí de Fréin](https://ieeexplore.ieee.org/author/37086819785)
 
 ### In this project, we provide:
 
@@ -11,17 +11,17 @@ This project represents the work in our paper submmitted to [2022 IEEE 2nd Confe
 
 #### OS: Ubuntu 20.04.x
 
->  If you are using Windows or other OS, you can install Ubuntu 20.04 as a Virtual Machine (VM) using Virtual Box. You can download the ISO installer from the this [link.](https://www.ubuntu.com/download/desktop)
+>  If you are using Windows or other OS, you can install Ubuntu 20.04 as a Virtual Machine (VM) using Virtual Box. You can download the ISO installer from this [link.](https://www.ubuntu.com/download/desktop)
 
 ####  Ryu controller
 
-> We use [Ryu](https://ryu-sdn.org/) to deploy our management and monitoring SDN application. Ryu can work in any OS Environment that supports python 3. You can install Ryu as follows:
+> We use [Ryu](https://ryu-sdn.org/) to deploy our management and monitoring SDN application. Ryu can work in any OS Environment that supports Python 3. You can install Ryu as follows:
 
  ```sudo pip install ryu```
 
 #### Mininet
 
-> To simulate an SDN network, we use the popular framework [Mininet](http://mininet.org/). Mininet currenttly only works in Linux. In our project, we run mininet in an Ubuntu 20.04.2 LTS VM. To get mininet, you can simply download a compressed Mininet VM from [Mininet downloadpage](https://github.com/mininet/mininet/wiki/Mininet-VM-Images) or install through apt: 
+> To simulate an SDN network, we use the popular framework [Mininet](http://mininet.org/). Mininet currently only works in Linux. In our project, we run mininet in an Ubuntu 20.04.2 LTS VM. To get mininet, you can simply download a compressed Mininet VM from [Mininet downloadpage](https://github.com/mininet/mininet/wiki/Mininet-VM-Images) or install it through apt: 
 ```
 sudo apt update 
 sudo apt install mininet
@@ -43,14 +43,14 @@ sudo apt-get install openvswitch-switch
 ```
 
 #### Distributed Internet Traffic Generator
-> D-ITG is a platform capable to produce traffic at packet level accurately replicating appropriate stochastic processes for both IDT (Inter Departure Time) and PS (Packet Size) random variables (exponential, uniform, cauchy, normal, pareto, ...).
-D-ITG supports both IPv4 and IPv6 traffic generation and it is capable to generate traffic at network, transport, and application layer.
+> D-ITG is a platform capable of producing traffic at the packet level accurately replicating appropriate stochastic processes for both IDT (Inter Departure Time) and PS (Packet Size) random variables (Exponential, Uniform, Cauchy, normal, Pareto, ...).
+D-ITG supports both IPv4 and IPv6 traffic generation and it is capable of generating traffic at network, transport, and application layer.
 Install and usage guidelines, you can be found [here](https://traffic.comics.unina.it/software/ITG/)
 
-> Quique installation as following:
+> Quique installation as follows:
 
 ```
-sudo apt-get install d-itg
+sudo apt-get install D-ITG
 ```
 
 #### Machine Learning packages
@@ -69,7 +69,7 @@ python -m pip install tensorflow, keras, numpy, pandas, scikit-learn, matplotlib
 
 In this project, we created two Ryu applications, and the source codes are stored in the  [SDN-Classifier directory](https://github.com/nsaif86/SDN-Classifier). The first component, monitoring, is responsible for collecting and extracting the features. The second, which is also our main application, performs our primary objective: feeding the features of each flow into the training saved model. The method is clearly described in our paper.
 
-In our situation, we have omitted network management on network services, so a flow for IP packets simply consists of only two matching fields: Source and Destination MAC Address. This simplicity reduces the load on the controller and helps switches forward packets faster.
+In our situation, we have omitted network management on network services, so a flow for IP packets simply consists of only two matching fields: Source and Destination MAC Address. This simplicity reduces the load on the controller and helps switch forward packets faster.
 
 To run the applications, copy the two Python programs into the ryu.app folder of the Ryu directory and open two terminal windows, execute the following command:
 
@@ -83,6 +83,13 @@ sudo python topology.py
 ```
 Then, you can generate traffic (voice, DDoS, etc.) using D-ITG inside Mininet and observe the results in the first terminal.
 
-More files and descriptions will be available as soon as possible. Please, if you find the code useful, cite our work.
+See this [video](https://youtu.be/3vOvAD6iaac), which includes a practical example of running the code at the end.. Please, if you find the code useful, cite our work.
 
-M. Nsaif, G. Kovásznai, M. Abboosh, A. Malik and R. d. Fréin, "ML-Based Online Traffic Classification for SDNs," 2022 IEEE 2nd Conference on Information Technology and Data Science (CITDS), Debrecen, Hungary, 2022, pp. 217-222, doi: 10.1109/CITDS54976.2022.9914138.
+@inproceedings{nsaif2022ml,
+  title={ML-based online traffic classification for SDNs},
+  author={Nsaif, Mohammed and Kov{\'a}sznai, Gergely and Abboosh, Mohammed and Malik, Ali and de Fr{\'e}in, Ruair{\'\i}},
+  booktitle={2022 IEEE 2nd Conference on Information Technology and Data Science (CITDS)},
+  pages={217--222},
+  year={2022},
+  organization={IEEE}
+}
